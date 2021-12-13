@@ -4,65 +4,70 @@
     <meta charset="UTF-8">
     <title>Budget-Appli</title>
     <link rel="stylesheet" href="style.css">
-    <script src="app.js"></script>
+    <script src="app.js" async></script>
 </head>
 <body>
     <div id="container">
         <h2>Depenses</h2>
         <div id="div1">
             <div id="div1-1">
-                <input type="number" placeholder="depenses fixes">
-                <input type="number" placeholder="loyer et chargers">
-                <input type="number" placeholder="crédits">
-                <input type="number" placeholder="eau/élec/gaz">
-                <input type="number" placeholder="internet">
-                <input type="number" placeholder="assurance habitation">
-                <input type="number" placeholder="assurance véhicules">
-                <input type="number" placeholder="mutuelle santé">
-                <input type="number" placeholder="frais de garde">
-                <input type="number" placeholder="impôts sur le revenu">
-                <input type="number" placeholder="impôts locaux">
-                <input type="number" placeholder="dépenses courantes">
-                <input type="number" placeholder="courses">
-                <input type="number" placeholder="essence/frais">
-                <input type="number" placeholder="activités sportives">
-                <input type="number" placeholder="occasionnelles">
-                <input type="number" placeholder="sorties">
-                <input type="number" placeholder="autres">
+                <input type="number" placeholder="depenses fixes" id="depF" class="depense">
+                <input type="number" placeholder="loyer et chargers" id="loyer" class="depense">
+                <input type="number" placeholder="crédits" id="credit" class="depense">
+                <input type="number" placeholder="eau/élec/gaz" id="eauEG" class="depense">
+                <input type="number" placeholder="internet" id="internet" class="depense">
+                <input type="number" placeholder="assurance habitation" id="assurance" class="depense">
+                <input type="number" placeholder="assurance véhicules" id="assuV" class="depense">
+                <input type="number" placeholder="mutuelle santé" id="mutuel" class="depense">
+                <input type="number" placeholder="frais de garde" id="fraisG" class="depense">
+                <input type="number" placeholder="impôts sur le revenu" id="impotR" class="depense">
+                <input type="number" placeholder="impôts locaux" id="impotL" class="depense">
+                <input type="number" placeholder="dépenses courantes" id="depC" class="depense">
+                <input type="number" placeholder="courses" id="course" class="depense">
+                <input type="number" placeholder="essence/frais" id="essenc" class="depense">
+                <input type="number" placeholder="activités sportives" id="activiteS" class="depense">
+                <input type="number" placeholder="occasionnelles" id="occasion" class="depense">
+                <input type="number" placeholder="sorties" id="sortie" class="depense">
+                <input type="number" placeholder="autres" id="autre1" class="depense">
             </div>
             <div class="but">
-                <button class="styleB">reset</button>
-                <button class="styleB">add</button>
+                <button class="styleB" id="reset1">reset</button>
+                <p ><span id="rente">0000</span> €</p>
+                <button class="styleB" id="add1">add</button>
             </div>
 
         </div>
         <h2>recettes</h2>
         <div id="div2">
             <div id="div1-2">
-                <input type="number" placeholder="salaire">
-                <input type="number" placeholder="les aides">
-                <input type="number" placeholder="les rentes">
-                <input type="number" placeholder="autre">
+                <input type="number" placeholder="salaire" id="salaire">
+                <input type="number" placeholder="les aides" id="aide">
+                <input type="number" placeholder="les rentes" id="rente2">
+                <input type="number" placeholder="autre" id="autre2">
             </div>
             <div class="but">
                 <button class="styleB">reset</button>
-                <button class="styleB">add</button>
+                <p> <span id="res2">0000</span> €</p>
+                <button class="styleB" id="add2">add</button>
             </div>
         </div>
         <h2>Epargne</h2>
         <div id="div3">
             <div id="div1-3">
-                <input type="number" placeholder="epargne">
+                <input type="number" placeholder="epargne" id="epargn">
             </div>
             <div class="but">
                 <button class="styleB">reset</button>
-                <button class="styleB">add</button>
+                <p> <span id="rest3">0000</span> €</p>
+                <button class="styleB" id="but3">add</button>
             </div>
         </div>
         <h2>Resultat</h2>
         <div id="div4">
             <div id="div1-4">
                 <p >Résulta des dépenses totals : <i class="fas fa-arrow-alt-circle-down"></i></p>
+                <button id="calcul">calcule</button>
+                <p> <span id="rest">0000</span> €</p>
                 <span id="message"></span>
             </div>
         </div>
