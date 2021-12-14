@@ -1,4 +1,4 @@
-// depenses
+// monthly expenses
 let reset1 = document.getElementById('reset1');
 let add1 = document.getElementById('add1');
 let rente1 = document.getElementById('rente');
@@ -36,7 +36,7 @@ let result = 0;
 
 add1.addEventListener('click',addit);
 
-//recette
+//recipe of the month
 let res2 = document.getElementById('res2');
 let add2 = document.getElementById('add2');
 function addit2 () {
@@ -65,7 +65,7 @@ let result3 = 0;
 but3.addEventListener('click', epargne);
 
 
-//resultat des depenses ...
+//expenditure result ...
 let calcTotal = 0;
 let rest = document.getElementById('rest');
 let calc = document.getElementById('calcul');
@@ -74,16 +74,26 @@ function total () {
     calcTotal = result2 - result - result3;
     rest.innerHTML = calcTotal;
     if(calcTotal === 0) {
-        message.innerHTML = "pile poile , essayez d'économisé";
+        message.innerHTML = "pile poile , essayez d'économisé !";
     }
 
     else if(calcTotal < 0) {
-        message.innerHTML = "Oula , il y a une couille dans l'patée";
+        message.innerHTML = "Oula , il y a une couille dans l'patée!!!";
     }
 
     else if(calcTotal > 0) {
-        message.innerHTML = "nickel vous avez encore du floodz";
+        message.innerHTML = "nickel vous avez encore du flooz !!!";
     }
 }
 
 calc.addEventListener('click' , total);
+let depenses = document.getElementsByClassName('depense');
+function reseting () {
+    for(let i = 0 ; i < depenses.length; i++) {
+        depenses[i].reset();
+        console.log(depenses);
+    }
+
+}
+
+reset1.addEventListener('click',reseting);
